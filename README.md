@@ -1,8 +1,9 @@
-# pos
+# People of the Storm
 
-A new Flutter project.
+A community platform app trying to provide a
+place to connect players of Fortnite Save the World
 
-## Getting Started
+## Documentation
 
-For help getting started with Flutter, view our online
-[documentation](https://flutter.io/).
+For help with understanding the code visit
+the offline Docs
