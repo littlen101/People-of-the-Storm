@@ -5,19 +5,21 @@ import '_authenticationButtons.dart';
 class Login extends StatelessWidget {
   @override
   build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        Image(
-          image: AssetImage("assets/images/purpleClouds.jpg"),
-          fit: BoxFit.fitWidth,
-          width: 300.0,
-        ),
-        Container(
-          color: Colors.grey[700],
-          padding: EdgeInsets.all(16.0),
-          child: authenticationButtons(),
-        )
-      ],
+    var appBar = AppBar(
+      backgroundColor: Colors.purple[900],
+      title: Text(
+        'People of the Storm',
+        style: Theme.of(context).textTheme.display1,
+      ),
+    );
+
+    return Scaffold(
+      appBar: appBar,
+      body: Container(
+        color: Colors.grey[200],
+        padding: EdgeInsets.symmetric(horizontal: 8.0),
+        child: authenticationButtons(),
+      ),
     );
   }
 }
