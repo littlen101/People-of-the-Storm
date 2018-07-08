@@ -10,13 +10,23 @@ class PeopleOfStorm extends StatelessWidget {
     return MaterialApp(
       title: 'People of the Storm',
       theme: ThemeData(
-        fontFamily: "Roboto",
-        primarySwatch: MaterialColor(900, {
-          50: Colors.purple[50],
-          100: Colors.purple[100],
-          200: Colors.purple[200],
-          900: Colors.purple[900]
-        }),
+        textTheme: TextTheme(
+          display1: TextStyle(
+            color: Colors.white,
+          ),
+          display2: TextStyle(
+            color: Colors.black,
+          ),
+          display3: TextStyle(
+            color: Colors.blue,
+          ),
+          display4: TextStyle(
+            color: Colors.amber,
+          ),
+          headline: TextStyle(
+            color: Colors.lightGreen,
+          ),
+        ),
       ),
       home: Login(),
     );

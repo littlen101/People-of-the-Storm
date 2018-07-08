@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Fri Jul 06 14:54:09 CDT 2018
+#Sun Jul 08 12:24:02 CDT 2018
 4.path=flutter_assets/fonts/Roboto-Bold.ttf
 13.baseType=DIRECTORY
 8.set=ASSET
