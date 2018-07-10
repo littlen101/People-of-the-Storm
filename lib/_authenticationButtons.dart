@@ -66,7 +66,7 @@ class AuthenticationButtons extends StatelessWidget {
           child: Center(
             child: RaisedButton(
               onPressed: () {
-                _authMethod();
+                Navigator.of(context).pop(_authMethod());
               },
               color: _authColor['background'],
               shape: RoundedRectangleBorder(

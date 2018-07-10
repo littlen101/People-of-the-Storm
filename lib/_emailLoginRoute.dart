@@ -1,19 +1,39 @@
 import 'package:flutter/material.dart';
 
+import 'dart:async';
+
+import 'package:firebase_auth/firebase_auth.dart';
+
+final FirebaseAuth _auth = FirebaseAuth.instance;
+
 class EmailLoginRoute extends StatefulWidget {
   @override
   _EmailLoginState createState() => _EmailLoginState();
 }
 
 class _EmailLoginState extends State<EmailLoginRoute> {
-  String _email;
-  String _hpDisplay;
-  String _displayName;
-
   final _formKey = GlobalKey<FormState>();
+
+  String _passwordValidator(String value) {
+    if (value.length < 8)
+      return "Please enter a password at least 8 characters long";
+
+    return null;
+  }
+
+  String _emailValidator(String value) {
+    if (value.contains(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)"))
+      return null;
+
+    return "Please enter a valid Email";
+  }
 
   @override
   Widget build(BuildContext context) {
+    String _email;
+    String _passwd;
+    String _phTheme;
+
     return Stack(
       fit: StackFit.expand,
       children: <Widget>[
@@ -47,10 +67,12 @@ class _EmailLoginState extends State<EmailLoginRoute> {
                       color: Colors.white,
                       child: TextFormField(
                         decoration: InputDecoration(
-                          hintText: 'Enter Email',
+                          hintText: 'you@email.com',
                           labelText: 'Email',
                         ),
+                        validator: _emailValidator,
                         keyboardType: TextInputType.emailAddress,
+                        onSaved: (String value) => _email = value,
                       ),
                     ),
                     Container(
@@ -58,21 +80,31 @@ class _EmailLoginState extends State<EmailLoginRoute> {
                       padding: EdgeInsets.symmetric(vertical: 1.0),
                       child: TextFormField(
                         decoration: InputDecoration(
-                          hintText: 'Enter Password',
+                          hintText: 'passWrd',
                           labelText: 'Password',
                         ),
+                        validator: _passwordValidator,
                         keyboardType: TextInputType.text,
                         obscureText: true,
+                        onSaved: (String value) => _phTheme = value,
                       ),
                     ),
                     Padding(
                       padding: EdgeInsets.symmetric(vertical: 16.0),
                       child: RaisedButton(
-                        onPressed: () {
+                        onPressed: () async {
                           if (_formKey.currentState.validate()) {
                             // If the form is valid, we want to show a Snackbar
-                            Scaffold.of(context).showSnackBar(
-                                SnackBar(content: Text('Processing Data')));
+                            Scaffold.of(context).showSnackBar(SnackBar(
+                                content: Text('Logining in to User Account')));
+
+                            _formKey.currentState.save();
+
+                            FirebaseUser user =
+                                await _auth.signInWithEmailAndPassword(
+                                    email: _email, password: _phTheme);
+
+                            Navigator.pop(context, user);
                           }
                         },
                         child: Text('Login'),
