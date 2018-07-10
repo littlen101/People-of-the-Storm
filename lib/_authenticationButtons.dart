@@ -6,6 +6,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:flutter_facebook_login/flutter_facebook_login.dart';
 
+import '_emailLoginRoute.dart';
+
 class AuthenticationButtons extends StatelessWidget {
   final _authenticationProviders = ['Email', 'Facebook', 'Google', 'Sign-up'];
 
@@ -20,8 +22,6 @@ class AuthenticationButtons extends StatelessWidget {
   ];
 
   final FirebaseAuth _auth = FirebaseAuth.instance;
-
-  final _emailMethod = () => print('Email Tapped');
 
   Future<FirebaseUser> _facebookMethod() async {
     var facebookLogin = new FacebookLogin();
@@ -94,6 +94,19 @@ class AuthenticationButtons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final _emailMethod = () => Navigator
+            .of(context)
+            .push(MaterialPageRoute<Null>(builder: (BuildContext context) {
+          return Scaffold(
+            appBar: AppBar(
+              title: Text('Login'),
+              centerTitle: true,
+              elevation: 2.0,
+            ),
+            body: EmailLoginRoute(),
+          );
+        }));
+
     final _authenticationMethods = [
       _emailMethod,
       _facebookMethod,
