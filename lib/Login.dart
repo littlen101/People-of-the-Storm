@@ -15,10 +15,10 @@ class Login extends StatelessWidget {
 
     return Scaffold(
       appBar: appBar,
+      backgroundColor: Colors.grey[200],
       body: Container(
-        color: Colors.grey[200],
         padding: EdgeInsets.symmetric(horizontal: 8.0),
-        child: authenticationButtons(),
+        child: AuthenticationButtons(),
       ),
     );
   }
