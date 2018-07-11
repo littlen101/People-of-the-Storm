@@ -46,14 +46,12 @@ class AuthenticationButtons extends StatelessWidget {
   AuthenticationButtons(this._auth) : assert(_auth != null);
 
   Future<FirebaseUser> _googleMethod() async {
-    print('Start');
     GoogleSignInAccount googleUser = await _googleSignIn.signIn();
     GoogleSignInAuthentication googleAuth = await googleUser.authentication;
     FirebaseUser user = await _auth.signInWithGoogle(
       accessToken: googleAuth.accessToken,
       idToken: googleAuth.idToken,
     );
-    print('Finished');
     print("signed in " + user.displayName);
     return user;
   }

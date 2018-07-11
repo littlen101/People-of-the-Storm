@@ -30,8 +30,8 @@ class _HomeScreenState extends State<Home> {
           .document('KzsMa0nyKKdQULuwrjqV')
           .get();
 
-      String _name = _snapShot['${_user.uid}'];
-      print(_name);
+      String _name = _user.displayName ?? _snapShot['${_user.uid}'];
+
       setState(() {
         displayName = _name;
       });
