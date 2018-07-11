@@ -22,8 +22,7 @@ class _EmailLoginState extends State<EmailLoginRoute> {
   }
 
   String _emailValidator(String value) {
-    if (value.contains(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)"))
-      return null;
+    if (value.contains("@") && value.contains('.')) return null;
 
     return "Please enter a valid Email";
   }
@@ -104,7 +103,7 @@ class _EmailLoginState extends State<EmailLoginRoute> {
                                 await _auth.signInWithEmailAndPassword(
                                     email: _email, password: _phTheme);
 
-                            Navigator.pop(context, user);
+                            Navigator.of(context).pop(user);
                           }
                         },
                         child: Text('Login'),

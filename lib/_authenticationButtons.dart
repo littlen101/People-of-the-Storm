@@ -21,7 +21,7 @@ class AuthenticationButtons extends StatelessWidget {
     {'background': Colors.grey[700], 'text': Colors.white},
   ];
 
-  final FirebaseAuth _auth = FirebaseAuth.instance;
+  final FirebaseAuth _auth;
 
   Future<FirebaseUser> _facebookMethod() async {
     var facebookLogin = new FacebookLogin();
@@ -43,13 +43,17 @@ class AuthenticationButtons extends StatelessWidget {
     ],
   );
 
+  AuthenticationButtons(this._auth) : assert(_auth != null);
+
   Future<FirebaseUser> _googleMethod() async {
+    print('Start');
     GoogleSignInAccount googleUser = await _googleSignIn.signIn();
     GoogleSignInAuthentication googleAuth = await googleUser.authentication;
     FirebaseUser user = await _auth.signInWithGoogle(
       accessToken: googleAuth.accessToken,
       idToken: googleAuth.idToken,
     );
+    print('Finished');
     print("signed in " + user.displayName);
     return user;
   }
@@ -94,18 +98,16 @@ class AuthenticationButtons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _emailMethod = () => Navigator
-            .of(context)
-            .push(MaterialPageRoute<Null>(builder: (BuildContext context) {
-          return Scaffold(
-            appBar: AppBar(
-              title: Text('Login'),
-              centerTitle: true,
-              elevation: 2.0,
-            ),
-            body: EmailLoginRoute(),
-          );
-        }));
+    Future<FirebaseUser> _emailMethod() async {
+      FirebaseUser user = await Navigator.of(context).push(
+          MaterialPageRoute<FirebaseUser>(builder: (BuildContext context) {
+        return Scaffold(
+          body: EmailLoginRoute(),
+        );
+      }));
+
+      return user;
+    }
 
     final _authenticationMethods = [
       _emailMethod,

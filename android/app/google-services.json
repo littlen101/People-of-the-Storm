@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "678127844307-09lnb1l70kmeb2bonk85qq6v91gmib8e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.stormshelter.pos",
+            "certificate_hash": "7dc39775527cfd7a84ceae8a9dfa24f670cfb23c"
+          }
+        },
+        {
           "client_id": "678127844307-0qla5mj63s61ton77u11gsrgde7p8qfi.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "678127844307-0qla5mj63s61ton77u11gsrgde7p8qfi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2
