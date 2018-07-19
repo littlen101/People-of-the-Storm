@@ -6,7 +6,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:flutter_facebook_login/flutter_facebook_login.dart';
 
-import '_emailLoginRoute.dart';
+import 'emailLoginRoute.dart';
 
 class AuthenticationButtons extends StatelessWidget {
   final _authenticationProviders = ['Email', 'Facebook', 'Google', 'Sign-up'];
@@ -21,7 +21,7 @@ class AuthenticationButtons extends StatelessWidget {
     {'background': Colors.grey[700], 'text': Colors.white},
   ];
 
-  final FirebaseAuth _auth;
+  final FirebaseAuth _auth = FirebaseAuth.instance;
 
   Future<FirebaseUser> _facebookMethod() async {
     var facebookLogin = new FacebookLogin();
@@ -42,8 +42,6 @@ class AuthenticationButtons extends StatelessWidget {
       'email',
     ],
   );
-
-  AuthenticationButtons(this._auth) : assert(_auth != null);
 
   Future<FirebaseUser> _googleMethod() async {
     GoogleSignInAccount googleUser = await _googleSignIn.signIn();

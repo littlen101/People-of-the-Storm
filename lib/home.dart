@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'Login.dart';
+import 'login.dart';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -11,23 +11,25 @@ class Home extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<Home> {
-  FirebaseAuth _auth = FirebaseAuth.instance;
   Firestore _data = Firestore.instance;
   FirebaseUser _user;
   String displayName = 'Survivor';
+
+  static const String _userCollection = 'users';
+  static const String _emailDocument = 'KzsMa0nyKKdQULuwrjqV';
 
   @override
   Widget build(BuildContext context) {
     void getUser() async {
       _user ??= await Navigator.of(context).push(
         MaterialPageRoute<dynamic>(builder: (BuildContext context) {
-          return Login(_auth);
+          return Login();
         }),
       ) as FirebaseUser;
 
       DocumentSnapshot _snapShot = await _data
-          .collection('users')
-          .document('KzsMa0nyKKdQULuwrjqV')
+          .collection(_userCollection)
+          .document(_emailDocument)
           .get();
 
       String _name = _user.displayName ?? _snapShot['${_user.uid}'];
@@ -37,25 +39,11 @@ class _HomeScreenState extends State<Home> {
       });
     }
 
-    void updateUser() {
-      if (_user.displayName == null) {
-        setState(() {
-          displayName = _user.displayName;
-        });
-      }
-    }
-
     return Scaffold(
       appBar: AppBar(
         title: Text(
           'Welcome Home $displayName',
         ),
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.person),
-            onPressed: updateUser,
-          ),
-        ],
         centerTitle: true,
       ),
       body: Container(

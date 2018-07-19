@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'dart:async';
-
 import 'package:firebase_auth/firebase_auth.dart';
 
 final FirebaseAuth _auth = FirebaseAuth.instance;
@@ -37,7 +35,7 @@ class _EmailLoginState extends State<EmailLoginRoute> {
       fit: StackFit.expand,
       children: <Widget>[
         Image(
-          image: AssetImage('assets/images/splash.png'),
+          image: AssetImage('assets/images/launch_image.png'),
           fit: BoxFit.cover,
           color: Colors.black54,
           colorBlendMode: BlendMode.darken,
@@ -62,25 +60,27 @@ class _EmailLoginState extends State<EmailLoginRoute> {
                 ),
                 child: Column(
                   children: <Widget>[
+                    SizedBox(
+                      height: 90.0,
+                    ),
                     Container(
-                      color: Colors.white,
-                      child: TextFormField(
+                      child: TextField(
                         decoration: InputDecoration(
                           hintText: 'you@email.com',
                           labelText: 'Email',
+                          fillColor: Colors.transparent,
+                          filled: true,
                         ),
-                        validator: _emailValidator,
                         keyboardType: TextInputType.emailAddress,
-                        onSaved: (String value) => _email = value,
                       ),
                     ),
                     Container(
-                      color: Colors.white,
                       padding: EdgeInsets.symmetric(vertical: 1.0),
                       child: TextFormField(
                         decoration: InputDecoration(
                           hintText: 'passWrd',
                           labelText: 'Password',
+                          filled: true,
                         ),
                         validator: _passwordValidator,
                         keyboardType: TextInputType.text,
