@@ -73,7 +73,7 @@ class LoginAuthenticationButtons {
   }) : assert(context != null);
 
   // Standard Facebook Authentication flow taken from the Firebase Docs
-  Future<FirebaseUser> _facebookMethod() async {
+  void _facebookMethod() async {
     FirebaseUser user;
     try {
       var facebookLogin = new FacebookLogin();
@@ -86,7 +86,7 @@ class LoginAuthenticationButtons {
       print('unsucessful authentication');
     }
 
-    return user;
+    Navigator.of(context).pop(user);
   }
 
   // Required to use FirebaseAuth authentication with google
@@ -97,7 +97,7 @@ class LoginAuthenticationButtons {
   );
 
   // Standard Google authentication flow taken from FireBase Docs
-  Future<FirebaseUser> _googleMethod() async {
+  void _googleMethod() async {
     FirebaseUser user;
     try {
       GoogleSignInAccount googleUser = await _googleSignIn.signIn();
@@ -110,12 +110,12 @@ class LoginAuthenticationButtons {
       print('unsucessful authentication');
     }
 
-    return user;
+    Navigator.of(context).pop(user);
   }
 
   // Email authentication flow
   // Takes user to alternate Route for signing in with email and password
-  Future<FirebaseUser> _emailMethod() async {
+  void _emailMethod() async {
     FirebaseUser user = await showDialog(
         context: context,
         builder: (BuildContext context) {
@@ -195,8 +195,6 @@ class LoginAuthenticationButtons {
                     bool _successful = true;
                     if (_formKey.currentState.validate()) {
                       _formKey.currentState.save();
-                      print(_emailController.value.text);
-                      print(_passwordController.value.text);
                       try {
                         user = await auth.signInWithEmailAndPassword(
                             email: _emailController.value.text,
@@ -206,10 +204,7 @@ class LoginAuthenticationButtons {
                         _successful = false;
                       }
 
-                      if (_successful)
-                        Navigator
-                            .of(context)
-                            .popUntil(ModalRoute.withName('/'));
+                      if (_successful) Navigator.of(context).pop(user);
                     }
                   },
                 ),
@@ -218,7 +213,7 @@ class LoginAuthenticationButtons {
           );
         });
 
-    return user;
+    Navigator.of(context).pop(user);
   }
 
   /// Creates a list of usable [AuthenticationButton]s for the requester to

@@ -21,36 +21,39 @@ class _LoginState extends State<Login> {
   final POSLogoHero logo =
       POSLogoHero(child: POSLogo(upDown: true), tag: 'login');
 
-  void _pushLogin(BuildContext context) {
+  void _pushLogin(BuildContext context) async {
     timeDilation = 2.0;
-    Navigator.of(context).push(PageRouteBuilder(
-        opaque: true,
-        pageBuilder: (
-          BuildContext context,
-          Animation<double> animation,
-          Animation<double> secondaryAnimation,
-        ) =>
-            LoginPage(
-              logo: logo,
-              context: context,
-              auth: widget.auth,
-            ),
-        transitionsBuilder: (
-          BuildContext context,
-          Animation<double> animation,
-          Animation<double> secondaryAnimation,
-          Widget child,
-        ) {
-          return FadeTransition(
-            opacity: Tween<double>(begin: 0.0, end: 1.0).animate(animation),
-            child: child,
-          );
-        }));
+    FirebaseUser _user =
+        await Navigator.of(context).push(PageRouteBuilder<FirebaseUser>(
+            opaque: true,
+            pageBuilder: (
+              BuildContext context,
+              Animation<double> animation,
+              Animation<double> secondaryAnimation,
+            ) =>
+                LoginPage(
+                  logo: logo,
+                  context: context,
+                  auth: widget.auth,
+                ),
+            transitionsBuilder: (
+              BuildContext context,
+              Animation<double> animation,
+              Animation<double> secondaryAnimation,
+              Widget child,
+            ) {
+              return FadeTransition(
+                opacity: Tween<double>(begin: 0.0, end: 1.0).animate(animation),
+                child: child,
+              );
+            }));
+
+    Navigator.of(context).pop(_user);
   }
 
-  void _pushSignUp(BuildContext context) {
-    Navigator.of(context).push(
-          MaterialPageRoute(
+  void _pushSignUp(BuildContext context) async {
+    FirebaseUser _user = await Navigator.of(context).push(
+          MaterialPageRoute<FirebaseUser>(
             fullscreenDialog: true,
             builder: (BuildContext context) => SignUpPage(
                   logo: logo,
@@ -58,6 +61,7 @@ class _LoginState extends State<Login> {
                 ),
           ),
         );
+    Navigator.of(context).pop(_user);
   }
 
   @override

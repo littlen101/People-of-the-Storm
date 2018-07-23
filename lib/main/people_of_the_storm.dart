@@ -1,14 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:firebase_auth/firebase_auth.dart';
-
 import 'package:pos/home/home.dart';
-import 'package:pos/authentication/login.dart';
 
 /// Main app class which defines the theme and flow for a user
 class PeopleOfStorm extends StatefulWidget {
-  final FirebaseAuth _auth = FirebaseAuth.instance;
-
   // Creation of the app state
   @override
   _PeopleOfStormState createState() => _PeopleOfStormState();
@@ -55,33 +50,12 @@ class PeopleOfStorm extends StatefulWidget {
 }
 
 class _PeopleOfStormState extends State<PeopleOfStorm> {
-  FirebaseUser _user;
-  void _getCurrentUser() async {
-    _user ??= await widget._auth.currentUser();
-  }
-
   @override
   build(BuildContext context) {
     return MaterialApp(
       title: 'People of the Storm',
       theme: widget._buildTheme(),
-      home: Home(auth: widget._auth),
-      initialRoute: '/login',
-      onGenerateRoute: _getRoute,
-    );
-  }
-
-  Route<dynamic> _getRoute(RouteSettings settings) {
-    if (settings.name != '/login') return null;
-    _getCurrentUser();
-    if (_user != null) return null;
-
-    return MaterialPageRoute<void>(
-      settings: settings,
-      builder: (BuildContext context) => Login(
-            auth: widget._auth,
-          ),
-      fullscreenDialog: true,
+      home: Home(),
     );
   }
 }

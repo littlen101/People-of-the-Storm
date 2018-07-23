@@ -6,30 +6,18 @@
     </shared>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="87aaf6d0-d290-4659-b632-f841ad52f902" name="Default" comment="Completed Authentication Flow - Need to redo LoginPage and work out">
-      <change afterPath="$PROJECT_DIR$/lib/assets/animatedLogo.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/assets/shutter.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/authentication/login.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/authentication/loginAuthenticationButtons.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/authentication/loginPage.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/authentication/signUpPage.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/main/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/main_dart.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/main_dart.xml" afterDir="false" />
+    <list default="true" id="87aaf6d0-d290-4659-b632-f841ad52f902" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/google-services.json" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/google-services.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/java/com/example/pos/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/java/app/stormshelter/pos/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/authenticationButtons.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/emailLoginRoute.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/authentication/emailLoginRoute.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/home.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/home/home.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/login.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/people_of_the_storm.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main/people_of_the_storm.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-hdpi/launch_image.png" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-hdpi/launch_image.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-mdpi/launch_image.png" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-mdpi/launch_image.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xhdpi/launch_image.png" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xhdpi/launch_image.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxhdpi/launch_image.png" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxhdpi/launch_image.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxxhdpi/launch_image.png" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxxhdpi/launch_image.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/authentication/login.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/authentication/login.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/authentication/loginAuthenticationButtons.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/authentication/loginAuthenticationButtons.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/authentication/signUpPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/authentication/signUpPage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/home/home.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/home/home.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main/people_of_the_storm.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main/people_of_the_storm.dart" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -44,20 +32,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="loginAuthenticationButtons.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/authentication/loginAuthenticationButtons.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="104" column="41" selection-start-line="104" selection-start-column="41" selection-end-line="104" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.dart" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/home/home.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="46" column="19" lean-forward="true" selection-start-line="46" selection-start-column="19" selection-end-line="46" selection-end-column="19" />
+            <state relative-caret-position="186">
+              <caret line="107" column="12" selection-start-line="107" selection-start-column="12" selection-end-line="107" selection-end-column="12" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -65,11 +44,56 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="signUpPage.dart" pinned="false" current-in-tab="false">
+      <file leaf-file-name="login.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/authentication/login.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="45" column="34" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="people_of_the_storm.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/main/people_of_the_storm.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-238">
+              <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="signUpPage.dart" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/authentication/signUpPage.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="66" column="43" selection-start-line="66" selection-start-column="43" selection-end-line="66" selection-end-column="43" />
+            <state relative-caret-position="136">
+              <caret line="70" selection-start-line="70" selection-end-line="70" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="loginAuthenticationButtons.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/authentication/loginAuthenticationButtons.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="201" column="30" selection-start-line="201" selection-start-column="30" selection-end-line="201" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="loginPage.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/authentication/loginPage.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2635">
+              <caret line="155" column="18" selection-start-line="155" selection-start-column="18" selection-end-line="155" selection-end-column="18" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -120,11 +144,11 @@
         <option value="$PROJECT_DIR$/lib/authentication/emailLoginRoute.dart" />
         <option value="$PROJECT_DIR$/lib/assets/animatedLogo.dart" />
         <option value="$PROJECT_DIR$/lib/authentication/loginPage.dart" />
-        <option value="$PROJECT_DIR$/lib/authentication/loginAuthenticationButtons.dart" />
-        <option value="$PROJECT_DIR$/lib/authentication/login.dart" />
         <option value="$PROJECT_DIR$/lib/main/people_of_the_storm.dart" />
         <option value="$PROJECT_DIR$/lib/authentication/signUpPage.dart" />
+        <option value="$PROJECT_DIR$/lib/authentication/login.dart" />
         <option value="$PROJECT_DIR$/lib/home/home.dart" />
+        <option value="$PROJECT_DIR$/lib/authentication/loginAuthenticationButtons.dart" />
       </list>
     </option>
   </component>
@@ -164,6 +188,12 @@
               <item name="people of the storm" type="b2602c69:ProjectViewProjectNode" />
               <item name="pos" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="authentication" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="people of the storm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pos" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
               <item name="home" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -193,11 +223,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\littl\Desktop\Become Him\Flutter\pos\lib\main" />
-      <recent name="C:\Users\littl\Desktop\Become Him\Flutter\pos\lib\authentication" />
-      <recent name="C:\Users\littl\Desktop\Become Him\Flutter\pos\lib\home" />
-      <recent name="C:\Users\littl\Desktop\Become Him\Flutter\pos\lib\assets" />
-      <recent name="C:\Users\littl\Desktop\Become Him\Flutter\pos\lib" />
+      <recent name="C:\Users\littl\Desktop\Become Him\Flutter\pos\android\app\src\main\res\mipmap-xxxhdpi" />
+      <recent name="C:\Users\littl\Desktop\Become Him\Flutter\pos\android\app\src\main\res\mipmap-xxhdpi" />
+      <recent name="C:\Users\littl\Desktop\Become Him\Flutter\pos\android\app\src\main\res\mipmap-xhdpi" />
+      <recent name="C:\Users\littl\Desktop\Become Him\Flutter\pos\android\app\src\main\res\mipmap-mdpi" />
+      <recent name="C:\Users\littl\Desktop\Become Him\Flutter\pos\android\app\src\main\res\mipmap-hdpi" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -276,7 +306,7 @@
       <workItem from="1532054532790" duration="1987000" />
       <workItem from="1532056768667" duration="8570000" />
       <workItem from="1532065642081" duration="7619000" />
-      <workItem from="1532104055568" duration="92030000" />
+      <workItem from="1532104055568" duration="105441000" />
     </task>
     <task id="LOCAL-00001" summary="Updated Launch Icon and SplashScreen with current versions of both">
       <created>1532030565971</created>
@@ -292,11 +322,18 @@
       <option name="project" value="LOCAL" />
       <updated>1532030697583</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Completed Authentication Flow - Need to redo LoginPage and work out the auto display name update">
+      <created>1532324770277</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1532324770277</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="170811000" />
+    <option name="totallyTimeSpent" value="184222000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -391,11 +428,12 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Updated Launch Icon and SplashScreen with current versions of both" />
     <MESSAGE value="Reworked Architecture to create a new app flow and code structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reworked Architecture to create a new app flow and code structure" />
+    <MESSAGE value="Completed Authentication Flow - Need to redo LoginPage and work out the auto display name update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed Authentication Flow - Need to redo LoginPage and work out the auto display name update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="4" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -718,16 +756,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/authentication/loginPage.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="155" column="18" selection-start-line="155" selection-start-column="18" selection-end-line="155" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/authentication/emailLoginRoute.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1614">
@@ -735,34 +763,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/authentication/login.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-731">
-          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/main/people_of_the_storm.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="48" column="26" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/authentication/loginAuthenticationButtons.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="104" column="41" selection-start-line="104" selection-start-column="41" selection-end-line="104" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/authentication/signUpPage.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="66" column="43" selection-start-line="66" selection-start-column="43" selection-end-line="66" selection-end-column="43" />
+        <state relative-caret-position="-238">
+          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -771,8 +775,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/home/home.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="46" column="19" lean-forward="true" selection-start-line="46" selection-start-column="19" selection-end-line="46" selection-end-column="19" />
+        <state relative-caret-position="186">
+          <caret line="107" column="12" selection-start-line="107" selection-start-column="12" selection-end-line="107" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/authentication/login.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="45" column="34" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/authentication/loginPage.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2635">
+          <caret line="155" column="18" selection-start-line="155" selection-start-column="18" selection-end-line="155" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/authentication/loginAuthenticationButtons.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="201" column="30" selection-start-line="201" selection-start-column="30" selection-end-line="201" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/authentication/signUpPage.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="70" selection-start-line="70" selection-end-line="70" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>

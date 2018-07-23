@@ -5,16 +5,15 @@ import 'dart:async';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
+import 'package:pos/authentication/login.dart';
+
 class Home extends StatefulWidget {
-  final FirebaseAuth auth;
-
-  Home({this.auth});
-
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
 
 class _HomeScreenState extends State<Home> {
+  FirebaseAuth _auth = FirebaseAuth.instance;
   Firestore _data = Firestore.instance;
   FirebaseUser _user;
   String displayName = 'Survivor';
@@ -36,17 +35,55 @@ class _HomeScreenState extends State<Home> {
     return disName;
   }
 
+  void listenForUser(FirebaseUser user) async {
+    if (user != null) {
+      setState(() {
+        _user = user;
+        updateDisplayName();
+      });
+    } else {
+      FirebaseUser _userSave = await Navigator.of(context).push(_getRoute());
+      setState(() {
+        _user = _userSave;
+      });
+      updateDisplayName();
+    }
+  }
+
+  void updateUser() {
+    print('in');
+    _auth.currentUser().then((FirebaseUser user) {
+      setState(() {
+        _user = user;
+      });
+    });
+  }
+
+  void updateDisplayName() {
+    print(_user);
+    setState(() {
+      if (_user != null)
+        displayName = _user?.displayName ?? _returnDisplayName();
+      else
+        displayName = 'Survivor';
+    });
+  }
+
+  Route<dynamic> _getRoute() {
+    return MaterialPageRoute<FirebaseUser>(
+      builder: (BuildContext context) => Login(
+            auth: _auth,
+          ),
+      fullscreenDialog: true,
+    );
+  }
+
   @override
   void initState() {
     super.initState();
-    _userSub = widget.auth.onAuthStateChanged.listen(listenForUser);
-  }
-
-  void listenForUser(FirebaseUser user) {
-    setState(() {
-      _user = user;
-      displayName = _user?.displayName ?? _returnDisplayName();
-    });
+    updateUser();
+    updateDisplayName();
+    _auth.onAuthStateChanged.listen(listenForUser);
   }
 
   @override
@@ -64,7 +101,11 @@ class _HomeScreenState extends State<Home> {
         child: MaterialButton(
           elevation: 3.0,
           color: Colors.grey,
-          onPressed: () => print('help'),
+          onPressed: () async {
+            await _auth.signOut();
+            updateUser();
+            updateDisplayName();
+          },
           splashColor: Colors.amber,
           child: Text('Punch Me please'),
         ),

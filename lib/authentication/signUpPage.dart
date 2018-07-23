@@ -69,7 +69,7 @@ class _SignUpPageState extends State<SignUpPage> {
 
     widget.auth.updateProfile(info);
 
-    Navigator.popUntil(context, ModalRoute.withName('/'));
+    Navigator.of(context).pop(_user);
   }
 
   Widget authProvider() {
