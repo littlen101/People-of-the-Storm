@@ -8,6 +8,50 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:678127844307:android:98782832dba300ce",
+        "android_client_info": {
+          "package_name": "app.stormshelter.pos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "678127844307-5j11ab0n59l7kclcnv4e55cam1duplhi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.stormshelter.pos",
+            "certificate_hash": "7dc39775527cfd7a84ceae8a9dfa24f670cfb23c"
+          }
+        },
+        {
+          "client_id": "678127844307-0qla5mj63s61ton77u11gsrgde7p8qfi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6dCbayBsc3Axkzp07xxJIqy3KqC0U7eU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "678127844307-0qla5mj63s61ton77u11gsrgde7p8qfi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:678127844307:android:f347524abba8ac69",
         "android_client_info": {
           "package_name": "com.stormshelter.pos"

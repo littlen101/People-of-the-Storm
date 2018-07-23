@@ -1,4 +1,4 @@
-package com.example.pos;
+package app.stormshelter.pos;
 
 import android.os.Bundle;
 

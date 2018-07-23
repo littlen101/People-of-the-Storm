@@ -78,7 +78,6 @@ class _EmailLoginState extends State<EmailLoginRoute> {
                       padding: EdgeInsets.symmetric(vertical: 1.0),
                       child: TextFormField(
                         decoration: InputDecoration(
-                          hintText: 'passWrd',
                           labelText: 'Password',
                           filled: true,
                         ),
